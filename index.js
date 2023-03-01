@@ -19,7 +19,7 @@ document.addEventListener("keypress", function() {
 // Adding event listener in all color buttons and call checkAnswer function
 for (let i = 0; i < document.querySelectorAll(".btn").length; i++) {
     document.querySelectorAll(".btn")[i].addEventListener("click", function(event) {
-        var userChosenColour = event.path[0].id; // Store id of the clicked button
+        var userChosenColour = event.target.id; // Store id of the clicked button
         userClickedPattern.push(userChosenColour); // Adding id of the clicked button in userClickedPattern array
         press(userChosenColour);
         playSound(userChosenColour);
